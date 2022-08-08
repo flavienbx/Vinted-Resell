@@ -14,10 +14,10 @@ import json
 
 
 url1 = "https://www.vinted.fr/api/v2/catalog/items?search_text=jordan&catalog_ids=1242&color_id[]=5&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first"
-webhook1 = "https://discord.com/api/webhooks/1005735666006642760/oWlc7ZyDxK_rEiUyfWlC4TK8nz6V2OPC94J7_gsC_t3_I504I8H6Innk_XGn7AM03JAB"
+webhook1 = "URL_WEBHOOK"
 
 url2 = "https://www.vinted.fr/api/v2/catalog/items?search_text=&catalog_ids=79&color_id[]=&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first"
-webhook2 = "https://discord.com/api/webhooks/1005739017649799178/NKXob7AzhZPOLyiVJ8LIbeff8FfxNKF_snV_6eg7SyL_cM2ncvuhwxCAg0auPsVDyefe"
+webhook2 = "URL_WEBHOOK"
 
 class Spy:
     gris = "\033[1;30;1m"

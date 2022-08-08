@@ -1,30 +1,15 @@
 pip install --upgrade pip
-pause
 pip install glob2
-pause
 pip install 2to3
-pause
 pip3 install selenium
-pause
 pip3 install webdriver-manager
-pause
 pip install discord-webhook
-pause
 pip install discord.py
-pause
 pip install os
-pause
 pip install chromedriver-binary
-pause
 pip install requests
-pause
 pip install time
-pause
 pip3 install pyfiglet
-pause
 pip install os
-pause
 pip install thread
-pause
 pip install json
-pause

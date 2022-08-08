@@ -4,9 +4,7 @@ pip install glob2
 pause
 pip install 2to3
 pause
-pip install pickle
-pause
-pip install selenium
+pip install -U selenium
 pause
 pip install webdriver-manager
 pause

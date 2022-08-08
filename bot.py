@@ -29,6 +29,34 @@ class Spy:
     cyan = "\033[1;36;1m"
     blanc = "\033[1;0;1m"
 
+with open("src/ver.json", 'r') as config:
+    ver = json.load(config)
+    version = ver['ver']
+    r = requests.get('https://raw.githubusercontent.com/flavienbx/Vinted-Resell/main/src/ver.json')
+    ver_data = r.json()
+    if ver['ver'] != ver_data['ver']:
+        try:
+            os.system('cls')
+            os.system('title Dev by Flavien')
+        except:
+            os.system('clear')
+
+
+
+        asciiart = f"""{Spy.rouge}
+        ██████╗  ██████╗ ████████╗
+        ██╔══██╗██╔═══██╗╚══██╔══╝
+        ██████╔╝██║   ██║   ██║   
+        ██╔══██╗██║   ██║   ██║   
+        ██████╔╝╚██████╔╝   ██║   
+        ╚═════╝  ╚═════╝    ╚═╝   
+        """
+
+        print(asciiart + "\n\n")
+        print(f"{Spy.gris}[{Spy.rouge}ATTENTION{Spy.gris}] Le bot n'est pas à jour ! (Version actuel : {Spy.blanc}{ver_data['ver']}{Spy.gris} Version du bot : {Spy.blanc}{ver['ver']}{Spy.gris})")
+        print(f"{Spy.gris}[{Spy.violet}MISE À JOUR{Spy.gris}] Liens du github : {Spy.blanc}https://github.com/flavienbx/Vinted-Resell{Spy.gris}")
+        os.system('pause')
+
 url_avatar_webhook = "https://www.techwikies.com/wp-content/uploads/2019/04/Vinted.png"
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--mute-audio")

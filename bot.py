@@ -162,7 +162,8 @@ def get_item():
         url_search = url2
         webhook = webhook2
     driver.get(url_search)
-    pre = driver.find_element_by_tag_name("pre").text
+    #pre = driver.find_element_by_tag_name("pre").text
+    pre = driver.find_element(By.TAG_NAME, "pre").text
     data = json.loads(pre)
     with open('src/temp.json', 'w') as j:
         json.dump(data, j)

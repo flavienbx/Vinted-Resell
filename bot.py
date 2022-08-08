@@ -12,12 +12,12 @@ from time import time, strftime, gmtime, sleep
 import pyfiglet, os, threading
 import json
 
-
-url1 = "https://www.vinted.fr/api/v2/catalog/items?search_text=jordan&catalog_ids=1242&color_id[]=5&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first"
-webhook1 = "URL_WEBHOOK"
-
-url2 = "https://www.vinted.fr/api/v2/catalog/items?search_text=&catalog_ids=79&color_id[]=&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first"
-webhook2 = "URL_WEBHOOK"
+with open("config.json", 'r') as config:
+    configs = json.load(config)
+n_max = 0
+for name in configs["config"]:
+    n_max += 1
+n_max = n_max
 
 class Spy:
     gris = "\033[1;30;1m"
@@ -39,8 +39,9 @@ driver.set_window_size(1024, 650)
 with open('src/n.json') as f:
     data = json.load(f)
 n = data["n"]
-if n >= 2:
+if n >= n_max:
     n = 1
+
 
 def get_item_info(webhook):
     try:
@@ -90,7 +91,7 @@ def get_item_info(webhook):
             with open('src/n.json') as f:
                 data = json.load(f)
             n = data["n"]
-            if n >= 2:
+            if n >= n_max:
                 n = 0
             n = n + 1
 
@@ -155,12 +156,14 @@ def get_item():
     with open('src/n.json') as f:
         data = json.load(f)
     n = data["n"]
-    if n == 1:
-        url_search = url1
-        webhook = webhook1
-    elif n == 2:
-        url_search = url2
-        webhook = webhook2
+    with open("config.json", 'r') as config:
+        configs = json.load(config)
+    temp_n_max = 0
+    for name in configs["config"]:
+        temp_n_max += 1
+        if temp_n_max == n:
+            url_search = configs['config'][name]['url']
+            webhook = configs['config'][name]['webhook']
     driver.get(url_search)
     #pre = driver.find_element_by_tag_name("pre").text
     pre = driver.find_element(By.TAG_NAME, "pre").text

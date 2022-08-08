@@ -29,6 +29,15 @@ class Spy:
     cyan = "\033[1;36;1m"
     blanc = "\033[1;0;1m"
 
+asciiart = f"""{Spy.rouge}
+██████╗  ██████╗ ████████╗
+██╔══██╗██╔═══██╗╚══██╔══╝
+██████╔╝██║   ██║   ██║   
+██╔══██╗██║   ██║   ██║   
+██████╔╝╚██████╔╝   ██║   
+╚═════╝  ╚═════╝    ╚═╝   
+"""
+
 with open("src/ver.json", 'r') as config:
     ver = json.load(config)
     version = ver['ver']
@@ -40,18 +49,6 @@ with open("src/ver.json", 'r') as config:
             os.system('title Dev by Flavien')
         except:
             os.system('clear')
-
-
-
-        asciiart = f"""{Spy.rouge}
-        ██████╗  ██████╗ ████████╗
-        ██╔══██╗██╔═══██╗╚══██╔══╝
-        ██████╔╝██║   ██║   ██║   
-        ██╔══██╗██║   ██║   ██║   
-        ██████╔╝╚██████╔╝   ██║   
-        ╚═════╝  ╚═════╝    ╚═╝   
-        """
-
         print(asciiart + "\n\n")
         print(f"{Spy.gris}[{Spy.rouge}ATTENTION{Spy.gris}] Le bot n'est pas à jour ! (Version actuel : {Spy.blanc}{ver_data['ver']}{Spy.gris} Version du bot : {Spy.blanc}{ver['ver']}{Spy.gris})")
         print(f"{Spy.gris}[{Spy.violet}MISE À JOUR{Spy.gris}] Liens du github : {Spy.blanc}https://github.com/flavienbx/Vinted-Resell{Spy.gris}")
@@ -78,18 +75,6 @@ def get_item_info(webhook):
             os.system('title Dev by Flavien')
         except:
             os.system('clear')
-
-
-
-        asciiart = f"""{Spy.rouge}
-        ██████╗  ██████╗ ████████╗
-        ██╔══██╗██╔═══██╗╚══██╔══╝
-        ██████╔╝██║   ██║   ██║   
-        ██╔══██╗██║   ██║   ██║   
-        ██████╔╝╚██████╔╝   ██║   
-        ╚═════╝  ╚═════╝    ╚═╝   
-        """
-
         print(asciiart + "\n\n")
         with open('src/temp.json') as mon_fichier:
             print(f"{Spy.blanc}[{Spy.jaune}RECHERCHE{Spy.blanc}] - Le bot recupere les informations de l'item...")

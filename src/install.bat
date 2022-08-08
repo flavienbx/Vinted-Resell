@@ -14,7 +14,7 @@ pip install discord.py
 pause
 pip install os
 pause
-pip install chromedriver_binary
+pip install chromedriver-binary
 pause
 pip install requests
 pause

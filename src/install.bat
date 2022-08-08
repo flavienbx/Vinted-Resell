@@ -20,7 +20,7 @@ pip install requests
 pause
 pip install time
 pause
-pip install pyfiglet
+pip3 install pyfiglet
 pause
 pip install os
 pause

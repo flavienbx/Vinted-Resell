@@ -6,7 +6,7 @@ pip install 2to3
 pause
 pip3 install selenium
 pause
-pip install webdriver-manager
+pip3 install webdriver-manager
 pause
 pip install discord-webhook
 pause

@@ -1,20 +1,16 @@
-pip install glob
+pip install --upgrade pip
 pause
-pip install lib2to3.pgen2
+pip install glob2
+pause
+pip install 2to3
 pause
 pip install pickle
 pause
 pip install selenium
 pause
-pip install selenium.webdriver.common.by
+pip install webdriver-manager
 pause
-pip install webdriver_manager.chrome
-pause
-pip install ChromeDriverManager
-pause
-pip install discord_webhook
-pause
-pip install DiscordWebhook
+pip install discord-webhook
 pause
 pip install os
 pause
@@ -28,7 +24,7 @@ pip install pyfiglet
 pause
 pip install os
 pause
-pip install threading
+pip install thread
 pause
 pip install json
 pause

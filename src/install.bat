@@ -10,6 +10,8 @@ pip3 install webdriver-manager
 pause
 pip install discord-webhook
 pause
+pip install discord.py
+pause
 pip install os
 pause
 pip install chromedriver_binary

@@ -144,7 +144,7 @@ def get_item_info(webhook):
             embed.add_embed_field(name='**``📏`` Taille**', value=f'[```YAML\n{size}```]({url})', inline=True)
             embed.add_embed_field(name='**``🔖`` Marque**', value=f'[```YAML\n{brand_title}```]({url})', inline=True)
             embed.add_embed_field(name='**``👨`` Auteur**', value=f'[```YAML\n{auteur}```]({profil_url})', inline=True)
-            embed.set_thumbnail(url=f'{image_photo}')
+            #embed.set_thumbnail(url=f'{image_photo}')
             embed.set_image(url=f'{image_photo}')
 
             webhook.add_embed(embed)

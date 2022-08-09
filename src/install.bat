@@ -13,3 +13,4 @@ pip3 install pyfiglet
 pip install os
 pip install thread
 pip install json
+pause

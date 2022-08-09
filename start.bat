@@ -1,3 +1,3 @@
-:main
+:index
 py bot.py
-goto :main
+goto :index

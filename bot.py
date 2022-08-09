@@ -80,21 +80,22 @@ def get_item_info(webhook):
             print(f"{Spy.blanc}[{Spy.jaune}RECHERCHE{Spy.blanc}] - Le bot recupere les informations de l'item...")
             data = json.load(mon_fichier)
 
+            size = "Aucune"
             data2 = data['items']
-            id = data2[0]['id'] #id de vente
+            id = data2[0]['id']
             sleep(0.5)
-            title = data2[0]['title'] #titre
-            brand_title = data2[0]['brand_title'] #marque
-            price = data2[0]['price'] #prix
-            currency = data2[0]['currency'] #Money
-            data3 = data2[0]['user'] #user
+            title = data2[0]['title']
+            brand_title = data2[0]['brand_title']
+            price = data2[0]['price']
+            currency = data2[0]['currency']
+            data3 = data2[0]['user']
             sleep(0.5)
-            profil_url = data3['profile_url'] #url du profil vendeur
-            auteur = data3['login'] #nom du vendeur
-            url = data2[0]['url'] #url du produit
-            size = data2[0]['size_title'] #taille
+            profil_url = data3['profile_url']
+            auteur = data3['login']
+            url = data2[0]['url']
+            size = data2[0]['size_title']
             data4 = data2[0]['photo']
-            image_photo = data4['url'] #image du produit
+            image_photo = data4['url']
             if currency == "EUR":
                 devise = "€"
             else:
@@ -138,6 +139,7 @@ def get_item_info(webhook):
             embed.add_embed_field(name='**``🔖`` Marque**', value=f'[```YAML\n{brand_title}```]({url})', inline=True)
             embed.add_embed_field(name='**``👨`` Auteur**', value=f'[```YAML\n{auteur}```]({profil_url})', inline=True)
             embed.set_thumbnail(url=f'{image_photo}')
+            embed.set_image(url=f'{image_photo}')
 
             webhook.add_embed(embed)
             response = webhook.execute()     

@@ -80,12 +80,15 @@ def get_item_info(webhook):
             print(f"{Spy.blanc}[{Spy.jaune}RECHERCHE{Spy.blanc}] - Le bot recupere les informations de l'item...")
             data = json.load(mon_fichier)
 
-            size = "Aucune"
             data2 = data['items']
             id = data2[0]['id']
             sleep(0.5)
             title = data2[0]['title']
             brand_title = data2[0]['brand_title']
+            if data2[0]['brand_title'] == "":
+                brand_title = "Aucune"
+            else:
+                brand_title = data2[0]['brand_title']
             price = data2[0]['price']
             currency = data2[0]['currency']
             data3 = data2[0]['user']
@@ -93,7 +96,10 @@ def get_item_info(webhook):
             profil_url = data3['profile_url']
             auteur = data3['login']
             url = data2[0]['url']
-            size = data2[0]['size_title']
+            if data2[0]['size_title'] == "":
+                size = "Aucune"
+            else:
+                size = data2[0]['size_title']
             data4 = data2[0]['photo']
             image_photo = data4['url']
             if currency == "EUR":

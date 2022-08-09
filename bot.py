@@ -174,6 +174,11 @@ def get_item():
         pass
     posting = []
     driver.get("https://www.vinted.fr/")
+     try:
+        os.system('cls')
+        os.system('title Dev by Flavien')
+    except:
+        os.system('clear')
     print(asciiart + "\n\n")
     with open('src/n.json') as f:
         data = json.load(f)

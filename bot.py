@@ -174,9 +174,8 @@ def get_item():
         pass
     posting = []
     driver.get("https://www.vinted.fr/")
-     try:
+    try:
         os.system('cls')
-        os.system('title Dev by Flavien')
     except:
         os.system('clear')
     print(asciiart + "\n\n")

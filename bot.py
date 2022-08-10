@@ -137,13 +137,13 @@ def get_item_info(webhook):
             sleep(2)
 
             webhook = DiscordWebhook(url=webhook, username="Vinted", avatar_url=url_avatar_webhook)
-            embed = DiscordEmbed(title='', description=f'[```YAML\n👕 {title}```]({url})', color='03b2f8')
+            embed = DiscordEmbed(title='', description=f'[\n👕 {title}]({url})', color='03b2f8')
             embed.set_footer(text='Bot by Flavien')
             embed.set_timestamp()
-            embed.add_embed_field(name='**``💶`` Prix**', value=f'[```YAML\n{price}{devise}```]({url})', inline=True)
-            embed.add_embed_field(name='**``📏`` Taille**', value=f'[```YAML\n{size}```]({url})', inline=True)
-            embed.add_embed_field(name='**``🔖`` Marque**', value=f'[```YAML\n{brand_title}```]({url})', inline=True)
-            embed.add_embed_field(name='**``👨`` Auteur**', value=f'[```YAML\n{auteur}```]({profil_url})', inline=True)
+            embed.add_embed_field(name='**``💶`` Prix**', value=f'[\n{price}{devise}]({url})', inline=True)
+            embed.add_embed_field(name='**``📏`` Taille**', value=f'[\n{size}]({url})', inline=True)
+            embed.add_embed_field(name='**``🔖`` Marque**', value=f'[\n{brand_title}]({url})', inline=True)
+            embed.add_embed_field(name='**``👨`` Auteur**', value=f'[\n{auteur}]({profil_url})', inline=True)
             #embed.set_thumbnail(url=f'{image_photo}')
             embed.set_image(url=f'{image_photo}')
 

@@ -123,9 +123,9 @@ def get_item_info(webhook):
                     json.dump(jdat, f)
             sleep(2)
 
-            webhook = DiscordWebhook(url=webhook, username="Vinted", avatar_url=url_avatar_webhook)
+            webhook = DiscordWebhook(url=webhook, username=API_Return_PLAN_name, avatar_url=API_Return_PLAN_Image)
             embed = DiscordEmbed(title='', description=f'[\n👕 {title}]({url})', color='03b2f8')
-            embed.set_footer(text='Bot by Flavien')
+            embed.set_footer(text=f'{API_Return_INTEGRATION_DiscordUsername}#{API_Return_INTEGRATION_DiscordDiscriminator}', icon_url=API_Return_INTEGRATION_DiscordAvatar)
             embed.set_timestamp()
             embed.add_embed_field(name='**``💶`` Prix**', value=f'[\n{price}{devise}]({url})', inline=True)
             embed.add_embed_field(name='**``📏`` Taille**', value=f'[\n{size}]({url})', inline=True)

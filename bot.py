@@ -1,3 +1,4 @@
+from web_panel import *
 from main import *
 from glob import glob
 from lib2to3.pgen2 import driver
@@ -19,6 +20,11 @@ n_max = 0
 for name in configs["config"]:
     n_max += 1
 n_max = n_max
+try:
+    if(panel_web):
+        pass
+except:
+    panel_web = "False"
 
 class Spy:
     gris = "\033[1;30;1m"
@@ -170,9 +176,15 @@ def get_item():
     temp_n_max = 0
     for name in configs["config"]:
         temp_n_max += 1
+        if (panel_web=="True"):
+            id = configs['config'][name]['id']
+            requests.get(f'http://127.0.0.1/api/requets?etat=1&id={id}')
         if temp_n_max == n:
             url_search = configs['config'][name]['url']
             webhook = configs['config'][name]['webhook']
+            if (panel_web=="True"):
+                id = configs['config'][name]['id']
+                requests.get(f'http://127.0.0.1/api/requets?etat=2&id={id}')
     driver.get(url_search)
     #pre = driver.find_element_by_tag_name("pre").text
     pre = driver.find_element(By.TAG_NAME, "pre").text

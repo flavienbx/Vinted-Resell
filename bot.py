@@ -51,6 +51,8 @@ with open("src/ver.json", 'r') as config:
     r = requests.get('https://raw.githubusercontent.com/flavienbx/Vinted-Resell/main/src/ver.json')
     ver_data = r.json()
     if ver['ver'] != ver_data['ver']:
+        if (panel_web=="True"):
+            requests.get(f'http://127.0.0.1/api/requets?serveur=1&statut=2')
         try:
             os.system('cls')
         except:
@@ -59,6 +61,9 @@ with open("src/ver.json", 'r') as config:
         print(f"{Spy.gris}[{Spy.rouge}ATTENTION{Spy.gris}] Le bot n'est pas à jour ! (Version actuel : {Spy.blanc}{ver_data['ver']}{Spy.gris} Version du bot : {Spy.blanc}{ver['ver']}{Spy.gris})")
         print(f"{Spy.gris}[{Spy.violet}MISE À JOUR{Spy.gris}] Liens du github : {Spy.blanc}https://github.com/flavienbx/Vinted-Resell{Spy.gris}")
         os.system('pause')
+    else:
+        if (panel_web=="True"):
+            requests.get(f'http://127.0.0.1/api/requets?serveur=1&statut=1')
 
 exec(base64.b64decode("aWYoQVBJX1JldHVybl9QTEFOX25hbWUgPT0gIlZpbnRlZCAtIFJlc2VsbCIpOgogICAgdXJsX2F2YXRhcl93ZWJob29rID0gImh0dHBzOi8vd3d3LnRlY2h3aWtpZXMuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE5LzA0L1ZpbnRlZC5wbmciCiAgICBjaHJvbWVfb3B0aW9ucyA9IHdlYmRyaXZlci5DaHJvbWVPcHRpb25zKCkKICAgIGNocm9tZV9vcHRpb25zLmFkZF9hcmd1bWVudCgiLS1tdXRlLWF1ZGlvIikKICAgIGNocm9tZV9vcHRpb25zLmFkZF9leHBlcmltZW50YWxfb3B0aW9uKCdleGNsdWRlU3dpdGNoZXMnLCBbJ2VuYWJsZS1sb2dnaW5nJ10pCiAgICBkcml2ZXIgPSB3ZWJkcml2ZXIuQ2hyb21lKENocm9tZURyaXZlck1hbmFnZXIoKS5pbnN0YWxsKCkpCiAgICBkcml2ZXIuc2V0X3dpbmRvd19zaXplKDEwMjQsIDY1MCkKCiAgICB3aXRoIG9wZW4oJ3NyYy9uLmpzb24nKSBhcyBmOgogICAgICAgIGRhdGEgPSBqc29uLmxvYWQoZikKICAgIG4gPSBkYXRhWyJuIl0KICAgIGlmIG4gPj0gbl9tYXg6CiAgICAgICAgbiA9IDE="))
 

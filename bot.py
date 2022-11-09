@@ -149,6 +149,9 @@ def get_item_info(webhook):
             response = webhook.execute()     
             print(f"{Spy.blanc}[{Spy.vert}INFORMATION{Spy.blanc}] - Nouvel item trouvé !")
             sleep(2)
+            if (panel_web=="True"):
+                update()
+                sleep(1)
             driver.refresh()
             get_item()
         except:

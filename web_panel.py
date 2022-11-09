@@ -9,6 +9,7 @@ def main():
     with open("src/licence.json", 'r') as licence:
         licences = json.load(licence)
     response = requests.get('http://127.0.0.1/api/bot')
+    requests.get(f'http://127.0.0.1/api/requets?serveur=1&statut=0')
     var = response.json()
     with open("config.json", 'w+') as configedit:
         configs["config"] = {}
@@ -25,4 +26,3 @@ def main():
         json.dump(licences,licenceedit,indent=4)
 
 main()
-

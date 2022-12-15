@@ -168,6 +168,16 @@ try:
 except:
     os.system('clear')
 
+def TransformApi(url):
+    url = url.replace("https://www.vinted.fr/vetements", "https://www.vinted.fr/api/v2/catalog/items")
+    url = url.replace("id[]", "ids")
+    url = url.replace("[]", "_ids")
+    url = url.replace("&order=price_high_to_low", "&order=newest_first")
+    url = url.replace("&order=price_low_to_high", "&order=newest_first")
+    url = url.replace("&order=relevance", "&order=newest_first")
+    url = url + "&page=1&per_page=1"
+    return url
+    
 def get_item():
     posting = []
     driver.get("https://www.vinted.fr/")
@@ -193,7 +203,7 @@ def get_item():
             if (panel_web=="True"):
                 id = configs['config'][name]['id']
                 requests.get(f'http://127.0.0.1/api/requets?etat=2&id={id}')
-    driver.get(url_search)
+    driver.get(TransformApi(url_search))
     #pre = driver.find_element_by_tag_name("pre").text
     pre = driver.find_element(By.TAG_NAME, "pre").text
     data = json.loads(pre)

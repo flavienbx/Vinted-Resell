@@ -3,22 +3,22 @@
         "Pull Nike Violet": {
             "id": "11",
             "url": "https://www.vinted.fr/vetements?size_id[]=208&catalog[]=79&color_id[]=6&brand_id[]=53&price_from=30&currency=EUR&price_to=100&status[]=6&status[]=1&status[]=2",
-            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+            "webhook": "WEBHOOK URL"
         },
         "Sweat Nike": {
             "id": "5",
             "url": "https://www.vinted.fr/vetements?brand_id[]=53&catalog[]=79&status[]=6&status[]=1",
-            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+            "webhook": "WEBHOOK URL"
         },
         "Jordan": {
             "id": "4",
             "url": "https://www.vinted.fr/vetements?brand_id[]=2703&catalog[]=1242&status[]=1&status[]=6",
-            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+            "webhook": "WEBHOOK URL"
         },
         "Ralph Lauren": {
             "id": "2",
             "url": "https://www.vinted.fr/vetements?brand_id[]=88&catalog[]=1206&status[]=6&status[]=1&status[]=2",
-            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+            "webhook": "WEBHOOK URL"
         }
     }
 }

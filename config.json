@@ -1,16 +1,24 @@
 {
     "config": {
-        "Jordan": {
-            "url": "https://www.vinted.fr/api/v2/catalog/items?search_text=jordan&catalog_ids=1242&color_id[]=5&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first",
-            "webhook": "URL_WEBHOOK"
-        },
-        "Sweat": {
-            "url": "https://www.vinted.fr/api/v2/catalog/items?search_text=&catalog_ids=79&color_id[]=&brand_ids=&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first",
-            "webhook": "URL_WEBHOOK"
+        "Pull Nike Violet": {
+            "id": "11",
+            "url": "https://www.vinted.fr/vetements?size_id[]=208&catalog[]=79&color_id[]=6&brand_id[]=53&price_from=30&currency=EUR&price_to=100&status[]=6&status[]=1&status[]=2",
+            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
         },
         "Sweat Nike": {
-            "url": "https://www.vinted.fr/api/v2/catalog/items?search_text=&catalog_ids=79&color_id[]=&brand_ids=53&size_ids=&material_ids=&status_ids=&country_ids=&city_ids=&is_for_swap=&currency=&price_to=&price_from=&page=1&per_page=1&order=newest_first",
-            "webhook": "URL_WEBHOOK"
+            "id": "5",
+            "url": "https://www.vinted.fr/vetements?brand_id[]=53&catalog[]=79&status[]=6&status[]=1",
+            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+        },
+        "Jordan": {
+            "id": "4",
+            "url": "https://www.vinted.fr/vetements?brand_id[]=2703&catalog[]=1242&status[]=1&status[]=6",
+            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
+        },
+        "Ralph Lauren": {
+            "id": "2",
+            "url": "https://www.vinted.fr/vetements?brand_id[]=88&catalog[]=1206&status[]=6&status[]=1&status[]=2",
+            "webhook": "https://discord.com/api/webhooks/1025768084763586630/4tfy_WIKjluhwA6j-tgV3NdHGtA7pzXJ9NifYXxA7YAGycuUc9KcfeSlN4XJ_wLfKjCI"
         }
     }
 }
